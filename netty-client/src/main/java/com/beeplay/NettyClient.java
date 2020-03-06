@@ -24,9 +24,10 @@ public class NettyClient {
             config.setMaxTotal(100);//最大总数
 
             ChannelPool channelPool=new ChannelPool(config,HOST,PORT);
-            NettyChannel nettyChannel=channelPool.getResource();
+
             BufferedReader in = new BufferedReader(new InputStreamReader((System.in)));
             for (;;) {
+                NettyChannel nettyChannel=channelPool.getResource();
                 final String input = in.readLine();
                 final String line = input != null? input.trim() : null;
                 if (line == null || "quit".equalsIgnoreCase(line)) {
