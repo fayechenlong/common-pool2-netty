@@ -13,8 +13,6 @@ public class NettyClient {
 
     public static void main(String[] args) throws Exception {
 
-        EventLoopGroup group = new NioEventLoopGroup();
-        try {
             System.out.println("Enter message (quit to end)");
 
             GenericObjectPoolConfig config=new GenericObjectPoolConfig();
@@ -39,8 +37,5 @@ public class NettyClient {
                 nettyChannel.getCh().writeAndFlush(line);
                 channelPool.returnResource(nettyChannel);
             }
-        }finally {
-            group.shutdownGracefully();
-        }
     }
 }
