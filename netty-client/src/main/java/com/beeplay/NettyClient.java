@@ -1,15 +1,13 @@
 package com.beeplay;
 
-import io.netty.channel.*;
-import io.netty.channel.nio.NioEventLoopGroup;
 import org.apache.commons.pool2.impl.GenericObjectPoolConfig;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 public class NettyClient {
-    private static final String HOST = System.getProperty("host", "127.0.0.1");
-    private static final int PORT = Integer.parseInt(System.getProperty("port", "8000"));
+    private static final String HOST = "127.0.0.1";
+    private static final int PORT = 8000;
 
     public static void main(String[] args) throws Exception {
 
