@@ -16,7 +16,7 @@ public class NettyClientHandler extends ChannelDuplexHandler {
     }
     @Override
     public void channelActive(ChannelHandlerContext ctx){
-       ctx.writeAndFlush(Unpooled.copiedBuffer("hi,i am netty client", CharsetUtil.UTF_8));
+       //ctx.writeAndFlush(Unpooled.copiedBuffer("hi,i am netty client", CharsetUtil.UTF_8));
     }
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg){

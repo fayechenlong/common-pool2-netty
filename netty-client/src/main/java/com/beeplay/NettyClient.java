@@ -11,7 +11,7 @@ public class NettyClient {
 
     public static void main(String[] args) throws Exception {
 
-            System.out.println("Enter message (quit to end)");
+            System.out.println("请输入需要发送的消息按回车发送  输入 quit 退出");
 
             GenericObjectPoolConfig config=new GenericObjectPoolConfig();
 
